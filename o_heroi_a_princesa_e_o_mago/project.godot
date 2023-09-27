@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="o_heroi_a_princesa_e_o_dragao"
+run/main_scene="res://cenas/SpamClick.tscn"
 config/icon="res://icon.png"
 
 [gui]
