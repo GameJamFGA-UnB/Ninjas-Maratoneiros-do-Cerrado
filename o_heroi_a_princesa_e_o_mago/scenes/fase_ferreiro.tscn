@@ -1274,6 +1274,48 @@
 41/shape_one_way_margin = 0.0
 41/shapes = [  ]
 41/z_index = 0
+42/name = "furniture.png 42"
+42/texture = ExtResource( 6 )
+42/tex_offset = Vector2( 0, 0 )
+42/modulate = Color( 1, 1, 1, 1 )
+42/region = Rect2( 288, 0, 32, 64 )
+42/tile_mode = 0
+42/occluder_offset = Vector2( 0, 0 )
+42/navigation_offset = Vector2( 0, 0 )
+42/shape_offset = Vector2( 0, 0 )
+42/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+42/shape_one_way = false
+42/shape_one_way_margin = 0.0
+42/shapes = [  ]
+42/z_index = 0
+43/name = "furniture.png 43"
+43/texture = ExtResource( 6 )
+43/tex_offset = Vector2( 0, 0 )
+43/modulate = Color( 1, 1, 1, 1 )
+43/region = Rect2( 736, 32, 32, 32 )
+43/tile_mode = 0
+43/occluder_offset = Vector2( 0, 0 )
+43/navigation_offset = Vector2( 0, 0 )
+43/shape_offset = Vector2( 0, 0 )
+43/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+43/shape_one_way = false
+43/shape_one_way_margin = 0.0
+43/shapes = [  ]
+43/z_index = 0
+44/name = "furniture.png 44"
+44/texture = ExtResource( 6 )
+44/tex_offset = Vector2( 0, 0 )
+44/modulate = Color( 1, 1, 1, 1 )
+44/region = Rect2( 0, 192, 32, 64 )
+44/tile_mode = 0
+44/occluder_offset = Vector2( 0, 0 )
+44/navigation_offset = Vector2( 0, 0 )
+44/shape_offset = Vector2( 0, 0 )
+44/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+44/shape_one_way = false
+44/shape_one_way_margin = 0.0
+44/shapes = [  ]
+44/z_index = 0
 
 [sub_resource type="TileSet" id=1]
 0/name = "interiors.png 0"
@@ -2277,7 +2319,7 @@
 32/shapes = [  ]
 32/z_index = 0
 
-[node name="world" type="Node2D"]
+[node name="fase_ferreiro" type="Node2D"]
 
 [node name="ferraria" type="Node2D" parent="."]
 position = Vector2( 205, 83 )
@@ -2316,7 +2358,7 @@ tile_data = PoolIntArray( 65538, 54, 0, 65539, 33, 0, 65540, 33, 0, 65541, 33, 0
 tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 131075, 536870933, 0, 131076, 536870932, 0, 131077, 536870940, 0, 196611, 536870935, 0, 196612, 536870934, 0, 196613, 536870939, 0, 196614, 536870942, 0, 262147, 536870938, 0, 262148, 536870936, 0, 262149, 536870937, 0, 262151, 536870943, 0, 262153, 536870950, 0, 524291, 536870951, 0, 655362, -2147483648, 0, 655376, -536870912, 0 )
+tile_data = PoolIntArray( 131075, 536870933, 0, 131076, 536870932, 0, 131077, 536870940, 0, 196611, 536870935, 0, 196612, 536870934, 0, 196613, 536870939, 0, 196614, 536870942, 0, 262147, 536870938, 0, 262148, 536870936, 0, 262149, 536870937, 0, 262151, 536870943, 0, 262153, 536870950, 0, 524291, 536870951, 0, 524299, 38, 0, 655362, -2147483648, 0, 655376, -536870912, 0 )
 
 [node name="wood" type="TileMap" parent="ferraria/furniture_2"]
 tile_set = SubResource( 9 )
@@ -2352,7 +2394,7 @@ tile_data = PoolIntArray( 65544, 3, 0, 131080, 5, 0, 196616, 5, 0, 262152, 5, 0,
 tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 131075, 536870933, 0, 131076, 536870932, 0, 131077, 536870940, 0, 196611, 536870935, 0, 196612, 536870934, 0, 196613, 536870939, 0, 196614, 536870942, 0, 262147, 536870938, 0, 262148, 536870936, 0, 262149, 536870937, 0, 262151, 536870943, 0, 262153, 536870950, 0, 458756, 536870952, 0, 458757, 536870953, 0, 524291, 536870951, 0, 655362, -2147483648, 0, 655376, -536870912, 0 )
+tile_data = PoolIntArray( 131075, 536870933, 0, 131076, 536870932, 0, 131077, 536870940, 0, 131082, 536870952, 0, 131083, 536870953, 0, 196611, 536870935, 0, 196612, 536870934, 0, 196613, 536870939, 0, 196614, 536870942, 0, 196623, 43, 0, 262147, 536870938, 0, 262148, 536870936, 0, 262149, 536870937, 0, 262151, 536870943, 0, 262153, 536870950, 0, 327689, 44, 0, 327695, 42, 0, 393231, 42, 0, 458756, 536870952, 0, 458757, 536870953, 0, 458761, 536870955, 0, 458767, 536870956, 0, 524291, 536870951, 0, 655362, -2147483648, 0, 655376, -536870912, 0 )
 
 [node name="wood" type="TileMap" parent="ferraria/furniture_3"]
 tile_set = SubResource( 9 )
