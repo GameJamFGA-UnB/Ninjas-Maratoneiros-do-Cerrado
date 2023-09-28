@@ -2320,6 +2320,8 @@
 32/z_index = 0
 
 [node name="fase_ferreiro" type="Node2D"]
+position = Vector2( -487, -250 )
+scale = Vector2( 2, 2 )
 
 [node name="ferraria" type="Node2D" parent="."]
 position = Vector2( 205, 83 )
@@ -2403,4 +2405,5 @@ format = 1
 tile_data = PoolIntArray( 262147, 536870912, 0 )
 
 [node name="ferreiro" parent="." instance=ExtResource( 1 )]
-position = Vector2( 576, 323 )
+position = Vector2( 602, 278 )
+scale = Vector2( 1.25, 1.25 )
