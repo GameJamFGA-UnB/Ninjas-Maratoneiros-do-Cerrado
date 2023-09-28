@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/imagens_itens/#1 - Transparent Icons.png" type="Texture" id=1]
+[ext_resource path="res://cenas/EspadaCorrendo.gd" type="Script" id=2]
+
+[node name="Espada" type="Node2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 289.209, 98.6008, 29.6289, 28.2666 )

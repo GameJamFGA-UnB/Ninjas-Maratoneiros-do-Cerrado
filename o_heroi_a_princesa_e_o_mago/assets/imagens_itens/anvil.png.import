@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/#1 - Transparent Icons.png-577037f176f754104d05338535c1dab4.stex"
+path="res://.import/anvil.png-4946bc7ab7c5d0e78bb5e3fcad757b40.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/imagens_itens/#1 - Transparent Icons.png"
-dest_files=[ "res://.import/#1 - Transparent Icons.png-577037f176f754104d05338535c1dab4.stex" ]
+source_file="res://assets/imagens_itens/anvil.png"
+dest_files=[ "res://.import/anvil.png-4946bc7ab7c5d0e78bb5e3fcad757b40.stex" ]
 
 [params]
 
