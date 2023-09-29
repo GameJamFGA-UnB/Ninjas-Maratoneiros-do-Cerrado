@@ -16,8 +16,6 @@ config/icon="res://Screenshot_6.png"
 
 [display]
 
-window/size/test_width=960
-window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
