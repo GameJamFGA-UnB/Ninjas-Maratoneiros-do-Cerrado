@@ -1,0 +1,137 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/characters/gothic-hero-run.png" type="Texture" id=1]
+[ext_resource path="res://scripts/First_scene.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 66, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 132, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 198, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 264, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 330, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 396, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 462, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 528, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 594, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 660, 0, 66, 48 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 726, 0, 66, 48 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "hero_run",
+"speed": 10.0
+} ]
+
+[node name="First_scene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 16.0
+margin_top = 108.0
+margin_right = 1007.0
+margin_bottom = 492.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 991.0
+margin_bottom = 384.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 991.0
+margin_bottom = 384.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Essa é a histora de um Herói, que foi convocado pelo
+seu rei para derrotar um grande dragão que destruia
+todas as cidades ao redor do continente. E durante o 
+o trajeto, ele foi enfrentando lobos demoníacos,
+ciclopes, lâmias, esqueltos e esquletos chefes, goblins e
+orcs. E por volta e outra ele passava pelas vias e
+visitava ferreiros para construir novas armas, 
+usando os materiais conquistados em suas 
+aventuras......... (clique no herói)"
+align = 3
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 742, 536 )
+scale = Vector2( 2.39394, 1.9375 )
+frames = SubResource( 15 )
+animation = "hero_run"
+frame = 4
+playing = true
+
+[node name="Button" type="Button" parent="AnimatedSprite"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -21.0
+margin_top = -25.0
+margin_right = 26.0
+margin_bottom = 20.0
+action_mode = 0
+
+[connection signal="pressed" from="AnimatedSprite/Button" to="." method="_on_Button_pressed"]
