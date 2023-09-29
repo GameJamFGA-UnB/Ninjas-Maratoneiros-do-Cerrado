@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/background/arumaito_vitory.webm" type="VideoStream" id=1]
+[ext_resource path="res://scripts/VideoPlayer.gd" type="Script" id=2]
+[ext_resource path="res://scripts/victory_scene.gd" type="Script" id=3]
+[ext_resource path="res://scenes/music_theme.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[node name="victory_scene" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1025.0
+margin_bottom = 600.0
+stream = ExtResource( 1 )
+autoplay = true
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1025.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_top = 215.0
+margin_right = 1025.0
+margin_bottom = 384.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 1025.0
+margin_bottom = 169.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_right = 1025.0
+margin_bottom = 169.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Parabéns!!!! Você provou que é um ferreiro DIGNO e fez
+ a espada do herói!!!!! Agora ele pode destruir o
+Dragão e libertar todo o reino. Mesmo sendo um NPC
+você contribui para esse sucesso!!!! Clique espaço"
+align = 3
+
+[node name="music_theme" parent="." instance=ExtResource( 4 )]
+
+[connection signal="finished" from="VideoPlayer" to="VideoPlayer" method="_on_VideoPlayer_finished"]

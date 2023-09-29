@@ -10,12 +10,14 @@ config_version=4
 
 [application]
 
-config/name="o_heroi_a_princesa_e_o_dragao"
-run/main_scene="res://cenas/SpamClick.tscn"
-config/icon="res://icon.png"
+config/name="You're Not The Hero"
+run/main_scene="res://scenes/MainMenu.tscn"
+config/icon="res://Screenshot_6.png"
 
 [display]
 
+window/size/test_width=960
+window/size/test_height=540
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

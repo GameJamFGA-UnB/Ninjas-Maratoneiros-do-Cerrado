@@ -1,3 +1,146 @@
-[gd_scene format=2]
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://cenas/EspadaCorrendo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://cenas/Marreta.gd" type="Script" id=2]
+[ext_resource path="res://assets/imagens_itens/#1 - Transparent Icons.png" type="Texture" id=3]
+[ext_resource path="res://cenas/MinigameFundir.gd" type="Script" id=4]
+[ext_resource path="res://cenas/SpawnEspada.gd" type="Script" id=5]
+[ext_resource path="res://icon.png" type="Texture" id=6]
+[ext_resource path="res://assets/imagens_itens/anvil.png" type="Texture" id=7]
+[ext_resource path="res://assets/sounds/sword_hit.mp3" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/sword_miss.mp3" type="AudioStream" id=9]
+[ext_resource path="res://assets/background/blacksmith-drawing-wallpaper-preview.jpg" type="Texture" id=10]
+[ext_resource path="res://assets/sounds/SplendideDreams.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/sprites/Holy VFX 01 Impact.png" type="Texture" id=12]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.682353, 0.0666667, 0.0666667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 12 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 12 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 12 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 12 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
 
 [node name="MinigameFundir" type="Node2D"]
+script = ExtResource( 4 )
+espada = ExtResource( 1 )
+
+[node name="Marreta" type="Node2D" parent="."]
+position = Vector2( 59, 471 )
+rotation = -1.0472
+scale = Vector2( 4, 4 )
+z_index = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Marreta"]
+position = Vector2( 10.3212, -6.43996 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 129.84, 324.629, 29.2507, 26.352 )
+
+[node name="SpawnEspada" type="Timer" parent="."]
+one_shot = true
+autostart = true
+script = ExtResource( 5 )
+
+[node name="Icon" type="Sprite" parent="."]
+position = Vector2( 101, 632 )
+scale = Vector2( 0.328125, 0.328125 )
+texture = ExtResource( 6 )
+
+[node name="Anvil" type="Sprite" parent="."]
+position = Vector2( 140, 522 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+self_modulate = Color( 0.968627, 0.909804, 0.909804, 1 )
+show_behind_parent = true
+material = SubResource( 1 )
+margin_left = 261.0
+margin_top = 62.0
+margin_right = 806.0
+margin_bottom = 100.0
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+max_value = 50.0
+percent_visible = false
+
+[node name="Progresso" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="EspadaCenario" type="Sprite" parent="."]
+position = Vector2( 133, 487 )
+rotation = 0.785398
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 31.4464, 162.865, 30.2355, 28.5711 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="EspadaCenario"]
+position = Vector2( 1.65917, -1.6375 )
+scale = Vector2( 1.06132, 1.09635 )
+frames = SubResource( 11 )
+frame = 6
+
+[node name="SwordHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -15.0
+
+[node name="SwordMiss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -15.0
+
+[node name="Blacksmith-drawing-wallpaper-preview" type="Sprite" parent="."]
+modulate = Color( 0.454902, 0.454902, 0.454902, 1 )
+position = Vector2( 510, 298 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -2
+texture = ExtResource( 10 )
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="timeout" from="SpawnEspada" to="." method="_on_SpawnEspada_timeout"]

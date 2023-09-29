@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/characters/ferreiro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scenario/decorative_props.png" type="Texture" id=2]
@@ -14,6 +14,8 @@
 [ext_resource path="res://scenes/scenario/little_tree.tscn" type="PackedScene" id=12]
 [ext_resource path="res://scenes/scenario/rock_1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/scenario/furniture_de_2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/holy_light.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/music_theme.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=2]
 0/name = "interiors.png 0"
@@ -2336,6 +2338,13 @@ extents = Vector2( 25.5, 9 )
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 7, 21 )
 
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 32
+font_data = SubResource( 13 )
+
 [node name="fase_ferreiro" type="Node2D"]
 
 [node name="ferraria" type="Node2D" parent="."]
@@ -2477,3 +2486,32 @@ scale = Vector2( 1.25, 1.25 )
 [node name="furniture_de_2" parent="YSort" instance=ExtResource( 14 )]
 position = Vector2( 297, 252 )
 scale = Vector2( 0.231088, 0.211665 )
+
+[node name="holy_light" parent="." instance=ExtResource( 15 )]
+position = Vector2( 368, 279 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = 268.0
+margin_top = 19.0
+margin_right = 718.0
+margin_bottom = 102.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+margin_right = 450.0
+margin_bottom = 83.0
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+margin_right = 450.0
+margin_bottom = 67.0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer"]
+margin_left = 46.0
+margin_right = 404.0
+margin_bottom = 67.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Dê cliques até chegar na 
+forja"
+align = 1
+
+[node name="music_theme" parent="." instance=ExtResource( 16 )]

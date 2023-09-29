@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SplendideDreams.mp3-09f47169562c595a4da270a1fa0c3195.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/SplendideDreams.mp3"
+dest_files=[ "res://.import/SplendideDreams.mp3-09f47169562c595a4da270a1fa0c3195.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

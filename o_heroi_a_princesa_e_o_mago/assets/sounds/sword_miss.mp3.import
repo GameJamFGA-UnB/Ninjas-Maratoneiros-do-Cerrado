@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sword_miss.mp3-d36a6ae17c96005e7a2c9f004f09b8fb.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/sword_miss.mp3"
+dest_files=[ "res://.import/sword_miss.mp3-d36a6ae17c96005e7a2c9f004f09b8fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
