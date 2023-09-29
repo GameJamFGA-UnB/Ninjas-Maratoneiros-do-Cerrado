@@ -86,6 +86,7 @@ position = Vector2( 661.125, 509.125 )
 scale = Vector2( 2.42213, 2.21104 )
 frames = SubResource( 8 )
 animation = "hero_jump"
+frame = 3
 playing = true
 
 [node name="Button" type="Button" parent="AnimatedSprite"]
