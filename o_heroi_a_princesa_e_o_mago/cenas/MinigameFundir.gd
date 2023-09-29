@@ -8,6 +8,11 @@ var restantes
 func _ready():
 	$Progresso.text = "Restantes: " + str(restantes)
 	restantes = $ProgressBar.max_value
+	start_shining()
+
+func start_shining():
+	$EspadaCenario/AnimatedSprite.frame = 6
+	$EspadaCenario/AnimatedSprite.playing = false
 	
 func remover_espada(idx):
 	espadas.pop_at(idx).queue_free()
@@ -30,7 +35,9 @@ func _process(delta):
 			if restantes > 0:
 				restantes -= 1
 			$SwordHit.play(0.34)
-			
+			$EspadaCenario/AnimatedSprite.playing = true
+			yield(get_tree().create_timer(0.2), "timeout")
+			start_shining()
 		else:
 			if restantes < $ProgressBar.max_value:
 				restantes += 1
@@ -38,7 +45,6 @@ func _process(delta):
 			
 		$Progresso.text = "Restantes: " + str(restantes)
 		$ProgressBar.value = $ProgressBar.max_value-restantes
-			
 
 
 func _on_SpawnEspada_timeout():

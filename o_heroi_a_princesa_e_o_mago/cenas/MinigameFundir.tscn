@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://cenas/EspadaCorrendo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://cenas/Marreta.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/sounds/sword_miss.mp3" type="AudioStream" id=9]
 [ext_resource path="res://assets/background/blacksmith-drawing-wallpaper-preview.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/sounds/SplendideDreams.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/sprites/Holy VFX 01 Impact.png" type="Texture" id=12]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -19,6 +20,42 @@ bg_color = Color( 0.682353, 0.0666667, 0.0666667, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 12 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 12 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 12 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 12 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 12 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 12 )
+region = Rect2( 160, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 12 )
+region = Rect2( 192, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
 
 [node name="MinigameFundir" type="Node2D"]
 script = ExtResource( 4 )
@@ -79,6 +116,12 @@ scale = Vector2( 3, 3 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 31.4464, 162.865, 30.2355, 28.5711 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="EspadaCenario"]
+position = Vector2( 1.65917, -1.6375 )
+scale = Vector2( 1.06132, 1.09635 )
+frames = SubResource( 11 )
+frame = 6
 
 [node name="SwordHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
