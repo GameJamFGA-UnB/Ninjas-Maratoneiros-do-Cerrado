@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/AUD-20230928-WA0015.mp3-a5ea04f0970440826e58808911dc63eb.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/AUD-20230928-WA0015.mp3"
+dest_files=[ "res://.import/AUD-20230928-WA0015.mp3-a5ea04f0970440826e58808911dc63eb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

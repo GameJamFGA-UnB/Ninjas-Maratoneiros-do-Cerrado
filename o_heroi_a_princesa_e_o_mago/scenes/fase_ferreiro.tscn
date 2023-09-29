@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scenes/characters/ferreiro.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/scenario/decorative_props.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scenes/scenario/rock_1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/scenario/furniture_de_2.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/holy_light.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/music_theme.tscn" type="PackedScene" id=16]
 
 [sub_resource type="TileSet" id=2]
 0/name = "interiors.png 0"
@@ -2512,3 +2513,5 @@ custom_fonts/font = SubResource( 14 )
 text = "Dê cliques até chegar na 
 forja"
 align = 1
+
+[node name="music_theme" parent="." instance=ExtResource( 16 )]

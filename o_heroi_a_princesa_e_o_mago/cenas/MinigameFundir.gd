@@ -34,6 +34,9 @@ func _process(delta):
 		if acertou:
 			if restantes > 0:
 				restantes -= 1
+			else:
+				yield(get_tree().create_timer(0.5), "timeout")
+				get_tree().change_scene("res://scenes/victory_scene.tscn")
 			$SwordHit.play(0.34)
 			$EspadaCenario/AnimatedSprite.playing = true
 			yield(get_tree().create_timer(0.2), "timeout")

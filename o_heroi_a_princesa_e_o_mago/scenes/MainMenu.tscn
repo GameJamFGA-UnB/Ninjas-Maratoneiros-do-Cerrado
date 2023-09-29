@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/music_theme.tscn" type="PackedScene" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/Adventurer.ttf"
@@ -133,3 +134,5 @@ margin_bottom = 40.0
 custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
 custom_fonts/font = SubResource( 8 )
 text = "Quit"
+
+[node name="music_theme" parent="." instance=ExtResource( 2 )]

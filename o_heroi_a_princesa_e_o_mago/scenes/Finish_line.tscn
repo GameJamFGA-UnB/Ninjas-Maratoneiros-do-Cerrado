@@ -1,0 +1,217 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/Finish_line.gd" type="Script" id=1]
+[ext_resource path="res://scenes/music_theme.tscn" type="PackedScene" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 32
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 32
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://assets/fonts/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 20
+font_data = SubResource( 13 )
+
+[node name="Finish_line" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 226.0
+margin_top = 134.0
+margin_right = 798.0
+margin_bottom = 466.0
+
+[node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 572.0
+margin_bottom = 60.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer4"]
+margin_right = 572.0
+margin_bottom = 60.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Obrigado por jogar!!!"
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 572.0
+margin_bottom = 124.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 173.0
+margin_right = 399.0
+margin_bottom = 60.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Créditos"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 572.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_left = 191.0
+margin_right = 381.0
+margin_bottom = 36.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Produtores:"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 168.0
+margin_right = 572.0
+margin_bottom = 332.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3"]
+margin_left = 166.0
+margin_right = 406.0
+margin_bottom = 164.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 32.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer"]
+margin_left = 31.0
+margin_right = 209.0
+margin_bottom = 32.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer"]
+margin_right = 178.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer/HBoxContainer/CenterContainer"]
+margin_right = 178.0
+margin_bottom = 32.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Levi Queiroz"
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer"]
+margin_top = 36.0
+margin_right = 240.0
+margin_bottom = 68.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer2"]
+margin_left = 63.0
+margin_right = 177.0
+margin_bottom = 32.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer2/HBoxContainer"]
+margin_right = 114.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer2/HBoxContainer/CenterContainer"]
+margin_right = 114.0
+margin_bottom = 32.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 8 )
+text = "Marcelo"
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer"]
+margin_top = 72.0
+margin_right = 240.0
+margin_bottom = 104.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer3"]
+margin_left = 22.0
+margin_right = 218.0
+margin_bottom = 32.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer3/HBoxContainer"]
+margin_right = 196.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer3/HBoxContainer/CenterContainer"]
+margin_right = 196.0
+margin_bottom = 32.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 10 )
+text = "Lorenzo Alves"
+
+[node name="CenterContainer4" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer"]
+margin_top = 108.0
+margin_right = 240.0
+margin_bottom = 140.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer4"]
+margin_right = 240.0
+margin_bottom = 32.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer4/HBoxContainer"]
+margin_right = 240.0
+margin_bottom = 32.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer4/HBoxContainer/CenterContainer"]
+margin_right = 240.0
+margin_bottom = 32.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 12 )
+text = "Lucas Rodrigues"
+
+[node name="CenterContainer5" type="CenterContainer" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer"]
+margin_top = 144.0
+margin_right = 240.0
+margin_bottom = 164.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer3/VBoxContainer/CenterContainer5"]
+margin_left = 63.0
+margin_right = 177.0
+margin_bottom = 20.0
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 14 )
+text = "Dê um Clique"
+
+[node name="music_theme" parent="." instance=ExtResource( 2 )]
